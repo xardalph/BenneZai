@@ -1,0 +1,319 @@
+.container{
+    padding: 20px;
+}
+
+.swiper-container, .slider-partenaires{
+    z-index: 0;
+}
+
+@media (min-width: 1200px) {
+    .first-container {
+        padding-top: 11rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .first-container {
+        padding-top: 10rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .first-container {
+        padding-top: 9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .first-container {
+        padding-top: 8rem;
+    }
+
+    iframe{
+        height: 550px;
+    }
+}
+
+/* ------------------- */
+/* ----- Colors ------ */
+/* ------------------- */
+
+.dark-purple{color:#262431}
+.bg-dark-purple{background-color: #262431}
+.light-purple{color:#2f2c3d}
+.bg-light-purple{background-color: #2f2c3d}
+.main-green{color: #95c11f}
+.bg-main-green{background-color: #95c11f}
+
+.visibleFix{
+    display: block!important;
+}
+
+/* ------------------- */
+/* ------- Font ------ */
+/* ------------------- */
+h1{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ------------------------ */
+/* -- Comment ça marche ? --*/
+/* ------------------------ */
+.number{
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.howItWorks{
+    padding-left:0;
+    color:white;
+    list-style-type: none
+}
+
+.howItWorks li{
+    padding: 5px;
+}
+
+.howItWorks li .fa-stack{
+    font-weight: bold;
+
+}
+.howItWorks li .fa-stack:hover .fa-stack-2x{
+    color: #95c11f!important;
+}
+
+/* ------------------- */
+/* ----- Sliders ------*/
+/* ------------------- */
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}
+
+.swiper-container {
+    position: absolute;
+    top: 69px;
+    width: 280px;
+    left: 44px;
+    height: 73%;
+}
+
+.swiper-pagination-bullet-active {
+    background: #95c11f!important;
+}
+
+.phone-container{
+    position: relative;
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-partenaires{
+    overflow: hidden;
+}
+
+/* ------------------- */
+/*-- Colonnes Atouts --*/
+/* ------------------- */
+
+.atouts{
+    text-align: center;
+    padding: 10px;
+}
+.atouts i{
+    background: #2f2c3d;
+    border-radius: 50%;
+    padding: 15px;
+    color: white;
+}
+
+.atouts .text-container h2{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ------------------- */
+/*-- Comment trier ? --*/
+/* ------------------- */
+.howto div{
+    padding: 10px;
+    color: white;
+}
+
+.pic{
+    background: #262431;
+    border-radius: 50%;
+    padding: 15px;
+    color: white;
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    line-height: 48px!important;
+}
+
+.positif{
+    background-color: rgba(149,193,31,0.5)
+}
+.negatif{
+    background-color: rgba(193,66,66,0.5)
+}
+
+.positif:before{
+    content: "+";
+    color: #95c11f;
+}
+
+.negatif:before{
+    content: "–";
+    color: red;
+}
+
+.positif:before, .negatif:before{
+    font-weight: bold;
+    font-size: 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.pic-img-container{
+    width: 75px;
+    height: 75px;
+    background-color: #262431;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.pic-img{
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------------------- */
+/*--- Arbre à bulles --*/
+/* ------------------- */
+.tree-container{
+    padding-top: 115px;
+    position: relative;
+    text-align: center;
+}
+.info1, .info2, .info3, .info4, .info5{
+    position: absolute;;
+}
+
+.info1, .info2{
+    text-align: right;
+}
+
+.info3{
+    text-align: center;
+}
+
+.info4, .info5{
+    text-align: left;
+}
+
+
+.info1{
+    left: -60px;
+    bottom: 220px;
+}
+.info2{
+    bottom: 450px;
+    left: -140px;
+}
+.info3{
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 760px;
+    text-align: center;
+}
+.info4{
+    bottom: 510px;
+    right: -135px;
+}
+.info5{
+    bottom: 250px;
+    right: -130px;
+}
+
+@media (max-width: 992px) {
+    .tree-container{
+        padding-top: 0;
+    }
+    .tree-container div{
+        display: block;
+        position: static;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1199px){
+    .info1 {
+        left: -40px;
+        bottom: 130px;
+    }
+
+    .info2 {
+        bottom: 330px;
+        left: -110px;
+    }
+
+    .info3{
+        bottom: 635px;
+    }
+
+    .info4{
+        bottom: 410px;
+        right: -105px;
+    }
+
+    .info5{
+        bottom: 200px;
+        right: -100px;
+    }
+}
+
+@media (min-width: 768px) {
+    .first-container {
+        padding-top: 9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .first-container {
+        padding-top: 8rem;
+    }
+}
+/* ------------------- */
+/*------- Footer ------*/
+/* ------------------- */
+.fa-stack .fas.fa-circle.fa-stack-2x{
+    color: #3b384b;
+}
+.fa-stack a .fab{
+    color: #eeeeee;
+}
+
+.fa-stack:hover .fa-stack-2x{
+    color: #95c11f!important;
+}
+
+.fa-stack .fa-stack-2x {
+    transition: all 0.2s ease;
+}
+
+
