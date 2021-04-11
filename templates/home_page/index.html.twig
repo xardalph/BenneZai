@@ -1,72 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "base.html.twig" %}
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="BenneZaï, est un projet qui a vu le jour en novembre 2020, autour d'un projet étudiant regroupant des étudiants web marketings et d'autres en ingénieries informatiques, nous avons eu envie de mettre en place ce projet pour sensibiliser les personnes vers le recyclage et le tri, ce qui important dans notre société actuelle.">
-    <meta name="author" content="WIS3 B3">
-
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-    <meta property="og:site_name" content="BenneZai" /> <!-- website name -->
-    <meta property="og:site" content="BenneZai" /> <!-- website link -->
-    <meta property="og:title" content="BenneZai"/> <!-- title shown in the actual shared post -->
-    <meta property="og:description" content="BenneZaï, est un projet qui a vu le jour en novembre 2020, autour d'un projet étudiant regroupant des étudiants web marketings et d'autres en ingénieries informatiques, nous avons eu envie de mettre en place ce projet pour sensibiliser les personnes vers le recyclage et le tri, ce qui important dans notre société actuelle." /> <!-- description shown in the actual shared post -->
-    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-    <meta property="og:type" content="article" />
-
-    <!-- Webpage Title -->
-    <title>BenneZai</title>
-
-
-{#    {{ asset('bootstrap.css') }}#}
-
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link href="asset/css/bootstrap.css" rel="stylesheet">
-    <link href="asset/css/swiper-bundle.min.css" rel="stylesheet">
-    <link href="asset/css/magnific-popup.css" rel="stylesheet">
-    <link href="asset/css/styles.css" rel="stylesheet">
-    <link href="asset/css/slider.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/cc38370118.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="asset/css/keske.css">
-
-    <!-- Favicon  -->
-    <link rel="icon" href="asset/icons/favicon.png">
-</head>
-<body data-spy="scroll" data-target=".fixed-top">
-
-
-
-<!-- Header -->
-<header id="commentCaMarche" class="cd-header">
-    <div id="cd-logo"><a id="btn1" href="#skill">Atouts</a></div>
-</header>
-
-<section id="cd-intro">
-    <div id="cd-intro-tagline">
-        <a href="#maps" class="cd-btn">Maps</a>
-        <img src="asset/icons/Logo_blanc.png" class="logoBenneZai" alt="">
-    </div>
-</section>
-
-<div class="cd-secondary-nav" style="position: absolute;left: -200px;">
-    <nav>
-        <ul>
-            <li>
-                <a href="#commentCaMarche" id="scrollTop" style="opacity: 0">
-                    <img src="asset/icons/Logo_Z_blanc.png" class="logoBenneZ" alt="">
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div>
+{% block body %}
 
 <div class="container first-container">
     <div class="row">
@@ -111,7 +45,7 @@
                 <img src="https://i.stack.imgur.com/vKQ2K.png)" class="phone" alt="Un beau téléphone.">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="https://picsum.photos/280/501" alt=""></div>
+                        <div class="swiper-slide"><img src="{{ asset('images/pourTel1.jpg') }}" alt=""></div>
                         <div class="swiper-slide"><img src="https://picsum.photos/280/500" alt=""></div>
                         <div class="swiper-slide"><img src="https://picsum.photos/280/502" alt=""></div>
                     </div>
@@ -230,7 +164,7 @@
         <div class="row">
             <div class="col-lg-1">
                 <div class="pic-img-container">
-                    <img src="asset/icons/picto-benne.png" alt="" class="pic-img">
+                    <img src="{{ asset('icons/picto-benne.png') }}" alt="" class="pic-img">
                 </div>
             </div>
             <div class="col-lg-11">
@@ -303,7 +237,7 @@
             </div>
         </div>
 
-        <img style="width: 60%;" src="asset/icons/arbre_bulle.png" alt="">
+        <img style="width: 60%;" src="{{ asset('icons/arbre_bulle.png') }}" alt="">
     </div>
 </div>
 
@@ -318,89 +252,15 @@
         </div>
         <div class="slider-partenaires">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="https://www.grenoble.fr/" target="_blank"><img src="asset/images/grenoble.png" alt="logo ville de grenoble"></a></div>
-                <div class="swiper-slide"><a href="https://www.grenoblealpesmetropole.fr/" target="_blank"><img src="asset/images/metro.png" alt="logo métropole de grenoble"></a></div>
-                <div class="swiper-slide"><a href="https://www.isere.fr/" target="_blank"><img src="asset/images/isere.png" alt="logo département isère"></a></div>
-                <div class="swiper-slide"><a href="https://www.corepile.fr/" v><img src="asset/images/corepile.png" alt="logo corepile"></a></div>
-                <div class="swiper-slide"><a href="https://www.epsi.fr/" target="_blank"><img src="asset/images/epsi.png" alt="logo epsi"></a></div>
-                <div class="swiper-slide"><a href="https://www.wis-ecoles.com/" target="_blank"><img src="asset/images/wis.png" alt="logo wis"></a></div>
+                <div class="swiper-slide"><a href="https://www.grenoble.fr/" target="_blank"><img src="{{ asset('images/grenoble.png') }}" alt="logo ville de grenoble"></a></div>
+                <div class="swiper-slide"><a href="https://www.grenoblealpesmetropole.fr/" target="_blank"><img src="{{ asset('images/metro.png') }}" alt="logo métropole de grenoble"></a></div>
+                <div class="swiper-slide"><a href="https://www.isere.fr/" target="_blank"><img src="{{ asset('images/isere.png') }}" alt="logo département isère"></a></div>
+                <div class="swiper-slide"><a href="https://www.corepile.fr/" v><img src="{{ asset('images/corepile.png') }}" alt="logo corepile"></a></div>
+                <div class="swiper-slide"><a href="https://www.epsi.fr/" target="_blank"><img src="{{ asset('images/epsi.png') }}" alt="logo epsi"></a></div>
+                <div class="swiper-slide"><a href="https://www.wis-ecoles.com/" target="_blank"><img src="{{ asset('images/wis.png') }}" alt="logo wis"></a></div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Footer -->
-<div class="footer bg-dark-blue">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6" >
-                <h6>À propos de BenneZaï</h6>
-                <p class="p-small f-text">Benne Zaï, est un projet qui a vu le jour en novembre 2020, autour d'un projet étudiant regroupant des étudiants web marketings et d'autres en ingénieries informatiques, nous avons eu envie de mettre en place ce projet pour sensibiliser les personnes vers le recyclage et le tri, ce qui est important dans notre société actuelle.</p>
-            </div> <!-- end of footer-col -->
-            <div class="col-lg-6 benne-footer">
-                <p class="p-small p-mail">Mail : <a href="mailto:contact@bennezai.fr"><strong>contact@bennezai.fr</strong></a></p>
-                <p class="p-small">Créé avec ❤️️ à Grenoble, France 🗻 <br>Copyright © <a href="asset/images/bac_jaune_gpso (1).jpg">Benne Zaï</a></p>
-                <div>
-                    <span class="fa-stack">
-                        <a href="https://www.instagram.com/bennezai_grenoble/" target="_blank">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-instagram fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="https://www.facebook.com/BenneZa%C3%AF-114952277079634" target="_blank">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </a>
-                    </span>
-                </div>
-            </div> <!-- end of footer-col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of footer -->
-<!-- end of footer -->
-
-
-<script src="asset/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-
-
-<!-- Scripts -->
-<script src="asset/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-<script src="asset/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-<script src="asset/js/swiper-bundle.min.js"></script> <!-- Swiper for image and text sliders -->
-<script src="asset/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-<script src="asset/js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-<script src="asset/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-<script src="asset/js/scripts.js"></script> <!-- Custom scripts -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script src="asset/js/jquery.min.js"></script>
-<script src="asset/js/main.js"></script>
-<script src="asset/js/modernizr.js"></script>
-
-<script>
-    var mySwiper = new Swiper('.swiper-container', {
-        loop: true,
-
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-
-        pagination: {
-            el: '.swiper-pagination',
-        },
-    })
-
-    var sliderPartenaires = new Swiper('.slider-partenaires', {
-        slidesPerView: 5,
-        loop: true,
-
-        autoplay: {
-            delay: 1500,
-            disableOnInteraction: false,
-        },
-    })
-</script>
-</body>
-</html>
+{% endblock %}

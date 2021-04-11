@@ -11,7 +11,7 @@
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
     <meta property="og:site_name" content="BenneZai" /> <!-- website name -->
     <meta property="og:site" content="BenneZai" /> <!-- website link -->
-    <meta property="og:title" content="BenneZai"/> <!-- title shown in the actual shared post -->
+    <meta property="og:title" content="{% block title %}BenneZai{% endblock %}"/> <!-- title shown in the actual shared post -->
     <meta property="og:description" content="BenneZaï, est un projet qui a vu le jour en novembre 2020, autour d'un projet étudiant regroupant des étudiants web marketings et d'autres en ingénieries informatiques, nous avons eu envie de mettre en place ce projet pour sensibiliser les personnes vers le recyclage et le tri, ce qui important dans notre société actuelle." /> <!-- description shown in the actual shared post -->
     <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
     <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
@@ -23,358 +23,45 @@
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link href="ressources/css/bootstrap.css" rel="stylesheet">
-    <link href="ressources/css/swiper-bundle.min.css" rel="stylesheet">
-    <link href="ressources/css/magnific-popup.css" rel="stylesheet">
-    <link href="ressources/css/styles.css" rel="stylesheet">
 
-    <link href="ressources/css/slider.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/slider.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cc38370118.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="ressources/css/keske.css">
+    <link rel="stylesheet" href="{{ asset('css/keske.css') }}">
 
     <!-- Favicon  -->
-    <link rel="icon" href="ressources/icons/favicon.png">
+    <link rel="icon" href="{{ asset('icons/favicon.png') }}">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
 
 
+{{ include('_navbar.html.twig') }}
+{% block body %}
 
-<!-- Header -->
-<header id="commentCaMarche" class="cd-header">
-    <div id="cd-logo"><a id="btn1" href="#skill">Atouts</a></div>
-</header>
-
-<section id="cd-intro">
-    <div id="cd-intro-tagline">
-        <a href="#maps" class="cd-btn">Maps</a>
-        <img src="ressources/icons/Logo_blanc.png" class="logoBenneZai" alt="">
-    </div>
-</section>
-
-<div class="cd-secondary-nav" style="position: absolute;left: -200px;">
-    <nav>
-        <ul>
-            <li>
-                <a href="#commentCaMarche" id="scrollTop" style="opacity: 0">
-                    <img src="ressources/icons/Logo_Z_blanc.png" class="logoBenneZ" alt="">
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div>
-
-<div class="container first-container">
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="text-container">
-                <h1>Comment <span style="color: #95c11f">ça marche ?</span></h1>
-                <p class="p-large">BenneZai est un outil qui vous aidera à recycler vos déchets et objets en vous donnant toutes les indications nécessaires.</p>
-                <ul class="p-large howItWorks" style="">
-                    <li>
-                        <span class="fa-stack">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="number">1</i>
-                        </span>
-                        Je cherche le type de déchet ou d’objet dont je veux me débarrasser,
-                    </li>
-                    <li>
-                        <span class="fa-stack">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="number">2</i>
-                        </span>
-                        Je trouve le point de collectes le plus près de chez moi,
-                    </li>
-                    <li>
-                        <span class="fa-stack">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="number">3</i>
-                        </span>
-                        Je n'ai plus qu’à me déplacer pour devenir un acteur du mouvement vert,
-                    </li>
-                    <li>
-                        <span class="fa-stack">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="number">4</i>
-                        </span>
-                        Je fais un geste pour la planète !
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="phone-container">
-                <img src="https://i.stack.imgur.com/vKQ2K.png)" class="phone" alt="Un beau téléphone.">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="https://picsum.photos/280/501" alt=""></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/280/500" alt=""></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/280/502" alt=""></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div id="skill"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="bg-dark-purple">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 atouts">
-                <i class="fas fa-thumbs-up fa-3x"></i>
-                <div class="text-container">
-                    <h2><span class="main-green">Simple</span> d'utilisation</h2>
-                    <p class="p-large">Votre point de collecte <br> en quelques clics.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 atouts">
-                <i class="fas fa-eye fa-3x"></i>
-                <div class="text-container">
-                    <h2>Vue<span class="main-green"> globale</span></h2>
-                    <p class="p-large">Tous les types de poubelles et points de collectes sur une même application.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 atouts">
-                <i class="fas fa-recycle fa-3x"></i>
-                <div class="text-container">
-                    <h2><span class="main-green">Sensibilisation</span> au tri</h2>
-                    <p class="p-large">Vous informe sur les bénéfices du recyclage et comment renouveler vos déchets.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="text-container">
-                    <h1>Comment <span style="color: #95c11f">trier ?</span></h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-1">
-                <i class="fas fa-wine-bottle fa-3x pic"></i>
-            </div>
-            <div class="col-lg-11">
-                <h2>Le verre</h2>
-                <p>Le verre est recyclable à l’infini mais attention, tous les déchets de type “verre” ne le sont pas.</p>
-                <button type="button" class="btn bg-main-green" data-toggle="collapse" data-target="#verre">En savoir plus</button>
-                <div id="verre" class="collapse howto">
-                    <div class="positif">
-                        Bouteilles, pots de confitures, pots de yaourts, flacons de parfum en verre.
-                    </div>
-                    <div class="negatif">
-                        Vaisselle culinaire (transparents) qui sont en vérité une céramique transparente, les verres spéciaux tels que les verres armés, les pare-brises, les écrans de télévision, les ampoules et néon d’éclairage, les lampes, le cristal, le verre opaline, les miroirs brisés, le verre non transparent et coloré, la vitrocéramique, les plateaux de micro-ondes…
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-1">
-                <i class="fas fa-lightbulb fa-3x pic"></i>
-            </div>
-            <div class="col-lg-11">
-                <h2>Les ampoules</h2>
-                <p>Pour recycler vos ampoules, il faut d’abord les distinguer en deux catégories : les recyclables et les non recyclables. Il suffira ensuite d’aller les déposer aux PAV près de chez vous ! 😊</p>
-                <button type="button" class="btn bg-main-green" data-toggle="collapse" data-target="#ampoule">En savoir plus</button>
-                <div id="ampoule" class="collapse howto">
-                    <div class="positif">
-                        Les ampoules à décharge et à LED (tubes fluorescents, lampes fluo-compactes, lampes LED). Facilement reconnaissables grâce au logo d’une poubelle barrée.
-
-                    </div>
-                    <div class="negatif">
-                        Les ampoules à filament (incandescence dont halogènes et linolites). Celles-ci peuvent aller dans la poubelle classique avec les ordures ménagères.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-1">
-                <i class="fas fa-battery-quarter fa-2x pic"></i>
-            </div>
-            <div class="col-lg-11">
-                <h2>Les piles</h2>
-                <p>Il ne faut pas les jeter dans une poubelle classique, elles seraient incinérées et les métaux lourds contenus à l’intérieur seraient rejetés dans l’atmosphère. De nos jours, les vendeurs et distributeurs proposent des points de collecte.</p>
-                <button type="button" class="btn bg-main-green" data-toggle="collapse" data-target="#pile">En savoir plus</button>
-                <div id="pile" class="collapse howto">
-                    <div class="positif">
-                        Piles alcalines, salines, piles bouton, lithium, li-on, NiMH, NiCd, Plomb sans acide.
-                    </div>
-                    <div class="negatif">
-                        Batteries au plomb et à l’acide (batterie de voiture ou moto), piles et batteries industrielles, condensateurs, chargeur pour piles rechargeables ou chargeur de batterie (à mettre avec les appareils électriques), onduleur.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-1">
-                <div class="pic-img-container">
-                    <img src="ressources/icons/picto-benne.png" alt="" class="pic-img">
-                </div>
-            </div>
-            <div class="col-lg-11">
-                <h2>Déchèterie</h2>
-                <p>Pour tout vos encombrants du type meubles, matériels éléctroniques... Il faudra apporter vos objets à la déchèterie, où ils seront recyclés comme il le faut.</p>
-                <button type="button" class="btn bg-main-green" data-toggle="collapse" data-target="#decheterie">En savoir plus</button>
-                <div id="decheterie" class="collapse howto">
-                    <div class="positif">
-                        Les metaux, les cartons, les déchets électriques électroniques, les déchets verts, les meubles, le bois, les huiles (végétales, moteur), les batteries, les pneus, les gravats, les encombrants...
-                    </div>
-
-                    <div class="negatif">
-                        Les ordures ménagères, le tri sélectif, les cendres, les cadavres d'animaux, les explosifs, les déchets contaminés, les pneux spéciaux...
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="maps"></div>
-<iframe width="100%" height="800px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/test-poubelles_517661?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=true&searchControl=true&tilelayersControl=false&embedControl=null&datalayersControl=expanded&onLoadPanel=caption&captionBar=false&fullscreenControl=true&locateControl=true&editinosmControl=false&measureControl=false"></iframe><p><a href="//umap.openstreetmap.fr/fr/map/test-poubelles_517661">Voir en plein écran</a></p>
-
-<div class="bg-dark-purple">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="text-container">
-                    <h1>Chiffres <span style="color: #95c11f">clés</span></h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container tree-container">
-        <div class="col-lg-4 info1" >
-            <div class="text-container">
-                <h2><span class="main-green">1,6 Millions</span></h2>
-                <p class="p-large">de tonnes de CO2 évitées grâce au recyclage des emballages
-                    soit l’équivalent de 780.000 voitures en moins sur les routes
-                </p>
-            </div>
-        </div>
-
-        <div class="col-lg-4 info2" >
-            <div class="text-container">
-                <h2><span class="main-green">30 Millions</span></h2>
-                <p class="p-large"> de Français peuvent trier tous leurs emballages et papiers grâce à la simplification du tri (début 2020)</p>
-            </div>
-        </div>
-
-        <div class="col-lg-6 info3" >
-            <div class="text-container">
-                <h2><span class="main-green">100%</span></h2>
-                <p class="p-large"> des Français ont accès au tri,  <span class="main-green">89%</span> des Français trient leurs emballages <span class="main-green">occasionnellement</span>, dont <span class="main-green">51%</span> systématiquement</p>
-            </div>
-        </div>
-
-        <div class="col-lg-4 info4" >
-            <div class="text-container">
-                <h2><span class="main-green">39 Millions</span></h2>
-                <p class="p-large">de tonnes de déchets produits en une année soit 580kg/hab</p>
-            </div>
-        </div>
-
-        <div class="col-lg-4 info5" >
-            <div class="text-container">
-                <h2><span class="main-green">11 Millions</span></h2>
-                <p class="p-large">de barils de pétrole évités par la production énergétique engendrée par le recyclage</p>
-            </div>
-        </div>
-
-        <img style="width: 60%;" src="ressources/icons/arbre_bulle.png" alt="">
-    </div>
-</div>
-
-<div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="text-container">
-                    <h1>Merci à nos <span style="color: #95c11f">partenaires</span></h1>
-                </div>
-            </div>
-        </div>
-        <div class="slider-partenaires">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="https://www.grenoble.fr/" target="_blank"><img src="ressources/images/grenoble.png" alt="logo ville de grenoble"></a></div>
-                <div class="swiper-slide"><a href="https://www.grenoblealpesmetropole.fr/" target="_blank"><img src="ressources/images/metro.png" alt="logo métropole de grenoble"></a></div>
-                <div class="swiper-slide"><a href="https://www.isere.fr/" target="_blank"><img src="ressources/images/isere.png" alt="logo département isère"></a></div>
-                <div class="swiper-slide"><a href="https://www.corepile.fr/" v><img src="ressources/images/corepile.png" alt="logo corepile"></a></div>
-                <div class="swiper-slide"><a href="https://www.epsi.fr/" target="_blank"><img src="ressources/images/epsi.png" alt="logo epsi"></a></div>
-                <div class="swiper-slide"><a href="https://www.wis-ecoles.com/" target="_blank"><img src="ressources/images/wis.png" alt="logo wis"></a></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Footer -->
-<div class="footer bg-dark-blue">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6" >
-                <h6>À propos de BenneZaï</h6>
-                <p class="p-small f-text">Benne Zaï, est un projet qui a vu le jour en novembre 2020, autour d'un projet étudiant regroupant des étudiants web marketings et d'autres en ingénieries informatiques, nous avons eu envie de mettre en place ce projet pour sensibiliser les personnes vers le recyclage et le tri, ce qui est important dans notre société actuelle.</p>
-            </div> <!-- end of footer-col -->
-            <div class="col-lg-6 benne-footer">
-                <p class="p-small p-mail">Mail : <a href="mailto:contact@bennezai.fr"><strong>contact@bennezai.fr</strong></a></p>
-                <p class="p-small">Créé avec ❤️️ à Grenoble, France 🗻 <br>Copyright © <a href="ressources/images/bac_jaune_gpso (1).jpg">Benne Zaï</a></p>
-                <div>
-                    <span class="fa-stack">
-                        <a href="https://www.instagram.com/bennezai_grenoble/" target="_blank">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-instagram fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="https://www.facebook.com/BenneZa%C3%AF-114952277079634" target="_blank">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </a>
-                    </span>
-                </div>
-            </div> <!-- end of footer-col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of footer -->
-<!-- end of footer -->
+{% endblock %}
+{{ include('_footer.html.twig') }}
 
 
-<script src="ressources/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+<script src="{{ asset('js/jquery.min.js') }}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
 
 
 <!-- Scripts -->
-<script src="ressources/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-<script src="ressources/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-<script src="ressources/js/swiper-bundle.min.js"></script> <!-- Swiper for image and text sliders -->
-<script src="ressources/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-<script src="ressources/js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-<script src="ressources/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-<script src="ressources/js/scripts.js"></script> <!-- Custom scripts -->
+<script src="{{ asset('js/bootstrap.min.js') }}"></script> <!-- Bootstrap framework -->
+<script src="{{ asset('js/jquery.easing.min.js') }}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+<script src="{{ asset('js/swiper-bundle.min.js') }}"></script> <!-- Swiper for image and text sliders -->
+<script src="{{ asset('js/jquery.magnific-popup.js') }}"></script> <!-- Magnific Popup for lightboxes -->
+<script src="{{ asset('js/morphext.min.js') }}"></script> <!-- Morphtext rotating text in the header -->
+<script src="{{ asset('js/validator.min.js') }}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+<script src="{{ asset('js/scripts.js') }}"></script> <!-- Custom scripts -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<script src="ressources/js/jquery.min.js"></script>
-<script src="ressources/js/main.js"></script>
-<script src="ressources/js/modernizr.js"></script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('js/modernizr.js') }}"></script>
 
 <script>
     var mySwiper = new Swiper('.swiper-container', {
