@@ -18,7 +18,7 @@ class Article
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=user::class, inversedBy="title")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="title")
      */
     private $user_id;
 
@@ -47,12 +47,12 @@ class Article
         return $this->id;
     }
 
-    public function getUserId(): ?user
+    public function getUserId(): ?User
     {
         return $this->user_id;
     }
 
-    public function setUserId(?user $user_id): self
+    public function setUserId(?User $user_id): self
     {
         $this->user_id = $user_id;
 

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier l'article{% endblock %}
+
+{% block content %}
+
+    <div class="container pt-3">
+        <h1 class="text-center pt-1">Modifier l'article : {{ article.title }}</h1>
+
+        {{ include('article/_form.html.twig', {'button_label': 'Modifier' }) }}
+
+        {{ include('article/_delete_form.html.twig') }}
+        <a class="btn btn-secondary mt-3" href="{{ path('article') }}">Voir les articles</a>
+        </br></br>
+    </div>
+{% endblock %}

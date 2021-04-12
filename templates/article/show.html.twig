@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <div class="container pt-3">
+
+        <h1 class="text-center pt-0">{{ article.title }}</h1>
+
+        <div class="card border-dark">
+            <div class="card border-dark">
+                <div class="card-header bg-dark text-light">
+                    Description
+                </div>
+                <div class="card-body bg-dark">
+                    <p class="card-text">{{ article.content }}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container-fluid d-flex flex-row justify-content-between mt-3">
+            <a class="btn btn-secondary float-left mt-3" href="{{ path('article') }}">Voir les articles</a>
+            <a class="btn btn-primary text-center ml-5 mt-3" href="{{ path('article_edit', {'id': article.id}) }}">Modifier</a>
+            {{ include('article/_delete_form.html.twig') }}
+        </div>
+    </div>   
+{% endblock %}
